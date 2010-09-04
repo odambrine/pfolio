@@ -1,0 +1,6 @@
+<% unless @transactions.empty? %>
+	<table class="transactions">
+		<%= render :partial => 'transaction', :collection => @transactions %>
+	</table>
+	<%= will_paginate @transactions %>
+<% end %>

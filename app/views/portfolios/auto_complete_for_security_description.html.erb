@@ -1,0 +1,6 @@
+<ul class="auto_complete">
+	<% @securities.each do |s| %>
+	  <li class="autocomplete_item"><%= h s.ticker %> - <%= h s.name %></li>
+	<% end %>
+	
+</ul>

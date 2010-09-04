@@ -1,0 +1,19 @@
+<tr>
+	
+	<td class="portfolio">
+		
+		<span class="portfolio_name"><%= h portfolio.name %></span>
+		<span><%= link_to "Users", :controller => "portfolios", :action => "show_holdings", :id => portfolio.id %></span>
+		<span><%= link_to "Cashflows", :controller => "portfolios", :action => "show_cashflows", :id => portfolio.id %></span>
+		<span><%= link_to "Transactions", :controller => "portfolios", :action => "show_transactions", :id => portfolio.id %></span>
+		
+		<span class="timestamp">
+			Created <%= time_ago_in_words(portfolio.created_at) %> ago
+		</span>
+	</td>
+	<td>
+		<%= link_to "delete", portfolio, :method => :delete, :confirm => "You sure?" %>
+	</td>
+	
+	
+</tr>

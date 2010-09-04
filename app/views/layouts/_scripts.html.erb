@@ -1,0 +1,51 @@
+<%= javascript_include_tag :defaults %>
+
+<!--CSS file (default YUI Sam Skin) -->
+<link type="text/css" rel="stylesheet" href="http://yui.yahooapis.com/2.8.1/build/autocomplete/assets/skins/sam/autocomplete.css">
+ 
+<!-- Dependencies -->
+<script src="http://yui.yahooapis.com/2.8.1/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script src="http://yui.yahooapis.com/2.8.1/build/datasource/datasource-min.js"></script>
+ 
+<!-- OPTIONAL: Get (required only if using ScriptNodeDataSource) -->
+<script src="http://yui.yahooapis.com/2.8.1/build/get/get-min.js"></script>
+ 
+<!-- OPTIONAL: Connection (required only if using XHRDataSource) -->
+<script src="http://yui.yahooapis.com/2.8.1/build/connection/connection-min.js"></script>
+ 
+<!-- OPTIONAL: Animation (required only if enabling animation) -->
+<script src="http://yui.yahooapis.com/2.8.1/build/animation/animation-min.js"></script>
+ 
+<!-- OPTIONAL: JSON (enables JSON validation) -->
+<script src="http://yui.yahooapis.com/2.8.1/build/json/json-min.js"></script>
+ 
+<!-- Source file -->
+<script src="http://yui.yahooapis.com/2.8.1/build/autocomplete/autocomplete-min.js"></script>
+
+<script type="text/javascript">
+  var myAutoComp = new YAHOO.widget.AutoComplete("myInput","myContainer", myDataSource);
+
+var sUri = "http://d.yimg.com/aq/autoc", oDS, oAC;
+
+oDS = new YAHOO.util.ScriptNodeDataSource(sUri);
+
+oDS.responseSchema = {
+resultsList: "ResultSet.Result",
+fields: ["symbol", "name", "exch", "type", "exchDisp"]
+};
+
+oDS.generateRequestCallback = function (id) {
+YAHOO.util.ScriptNodeDataSource.callbacks =
+YAHOO.util.ScriptNodeDataSource.callbacks[id];
+return "&" + this.scriptCallbackParam +
+"=YAHOO.util.ScriptNodeDataSource.callbacks";
+};
+
+oAC = new YAHOO.widget.AutoComplete("ysearchinput",
+"ysearchcontainer", oDS);
+
+oAC.generateRequest = function (sQuery) {
+return "?region=US?=en-US&query=" + sQuery;
+};
+
+</script>

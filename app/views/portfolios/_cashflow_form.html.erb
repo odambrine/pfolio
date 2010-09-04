@@ -1,0 +1,20 @@
+<% form_for @cashflow do |f| %>
+  <%= f.error_messages %>
+ 
+	  <div class="field">
+	  	<%= f.label :amount %><br />
+	    <%= f.text_field :amount %>
+	  </div>
+	
+	
+	  <div class="field">
+	  	<%= f.label :date %><br />
+	    <%= f.date_select :date %>
+	  </div>
+	
+	  <%= hidden_field_tag :portfolio_id, @cashflow.portfolio_id %>
+
+  <div class="actions">
+  	<%= f.submit "Submit" %>
+  </div>
+<% end %>

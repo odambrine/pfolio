@@ -1,0 +1,13 @@
+<tr>
+	
+	<td class="cashflow">
+		
+		<span class="cashflow_amount"><%= h cashflow.amount %></span>
+		<span class="date">Date: <%= h cashflow.date %></span>
+	</td>
+	<td>
+		<%= link_to "delete", cashflow, :method => :delete, :confirm => "You sure?" %>
+	</td>
+	
+	
+</tr>

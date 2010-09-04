@@ -1,0 +1,16 @@
+<h2>Portfolio: <%= h @portfolio.name %></h2>
+<table class="front">
+	<tr>
+		<td class="main">
+			<h2 class="transaction">Transactions:</h2>
+			<%= render 'portfolios/csv_import'%>
+			<%= render 'portfolios/transaction_form' %>
+			<%= render 'portfolios/transactions' %>
+		</td>
+		<td class="sidebar round">
+			<%= render 'pages/user_info' %>
+			
+		</td>
+	</tr>
+  	
+  </table>

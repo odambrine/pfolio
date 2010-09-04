@@ -1,0 +1,13 @@
+<h2>Edit user</h2>
+<% form_for(@user) do |f| %>
+  <%= render :partial => 'fields', :locals => { :f => f }%>
+  <div class="actions">
+  	<%= f.submit "Edit"%>
+  </div>
+<% end %>
+
+<div>
+	<%= gravatar_for @user %>
+	<%= link_to "change", "http://gravatar.com/emails", :target => "_blank" %>
+	
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  portfolio_id: 1
+  date: 2010-07-20
+  amount: 9.99
+
+two:
+  portfolio_id: 1
+  date: 2010-07-20
+  amount: 9.99

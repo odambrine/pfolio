@@ -1,0 +1,7 @@
+<% unless @holdings.empty? %>
+	<table class="holdings">
+		<%= render :partial => 'holding', :collection => @holdings %>
+	</table>
+	<%= will_paginate @holdings %>
+<% end %>
+

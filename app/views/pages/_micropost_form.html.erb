@@ -1,0 +1,12 @@
+<% form_for @micropost do |f| %>
+  <%= f.error_messages %>
+  
+		
+	<div class="field"><%= text_area_tag :content %></div>
+	
+
+  <div class="actions">
+  	<%= f.submit "Submit" %>
+  </div>
+<% end %>
+  

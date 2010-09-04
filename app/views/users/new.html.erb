@@ -1,0 +1,7 @@
+
+<% form_for(@user) do |f| %>
+  <%= render :partial => 'fields', :locals => { :f => f }%>
+  <div class="actions">
+  	<%= f.submit "Sign up"%>
+  </div>
+<% end %>

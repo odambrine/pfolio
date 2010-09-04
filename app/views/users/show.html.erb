@@ -1,0 +1,24 @@
+
+
+<table class="profile">
+	<tr>
+		<td class="main">
+			<h2>
+			  <%= gravatar_for @user %>
+			  <%= h @user.name %> 
+			</h2>
+			
+			<% unless @user.microposts.empty? %>
+			  <table class="microposts">
+			  	<%= render @microposts %>
+			  </table>
+			  <%= will_paginate @microposts %>
+			<% end %>
+		</td>
+		<td class="sidebar round">
+			<strong>Name</strong> <%= h @user.name %> <br />
+			<strong>URL</strong> <%= link_to user_path(@user), @user %> <br />
+			<strong>Microposts</strong><%= @user.microposts.count %>
+		</td>
+	</tr>
+</table>

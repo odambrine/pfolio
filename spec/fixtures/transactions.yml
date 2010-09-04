@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2010-08-10
+  portfolio_id: 1
+  security_id: 1
+  operation: MyString
+  quantity: 9.99
+  price: 9.99
+  cost: 9.99
+
+two:
+  date: 2010-08-10
+  portfolio_id: 1
+  security_id: 1
+  operation: MyString
+  quantity: 9.99
+  price: 9.99
+  cost: 9.99

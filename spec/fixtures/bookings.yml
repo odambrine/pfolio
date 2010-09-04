@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2010-08-16
+  security_id: 1
+  quantity: 9.99
+  expiry_date: 2010-08-16
+  buy_price: 9.99
+  sell_price: 9.99
+  cost: 9.99
+
+two:
+  date: 2010-08-16
+  security_id: 1
+  quantity: 9.99
+  expiry_date: 2010-08-16
+  buy_price: 9.99
+  sell_price: 9.99
+  cost: 9.99

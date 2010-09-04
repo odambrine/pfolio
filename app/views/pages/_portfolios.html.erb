@@ -1,0 +1,6 @@
+<% unless @portfolios.empty? %>
+	<table class="microposts">
+		<%= render :partial => 'portfolio', :collection => @portfolios %>
+	</table>
+	<%= will_paginate @portfolios %>
+<% end %>

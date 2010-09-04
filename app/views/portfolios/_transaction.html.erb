@@ -1,0 +1,18 @@
+<tr>
+	
+	<td class="transaction">
+		<span class="date">Date: <%= h transaction.date %></span>
+		<span class="security_id">Security_id: <%= h transaction.security_id %></span>
+		<span class="operation">Operation: <%= h transaction.operation %></span>
+		<span class="quantity">Quantity: <%= h transaction.quantity %></span>
+		<span class="price">Price: <%= h transaction.price %></span>
+		<span class="cost">Cost: <%= h transaction.cost %></span>
+		
+		
+	</td>
+	<td>
+		<%= link_to "delete", transaction, :method => :delete, :confirm => "You sure?" %>
+	</td>
+	
+	
+</tr>

@@ -1,0 +1,11 @@
+<li>
+  <%= gravatar_for user, :size => 30 %>
+  <%= link_to h(user.name), user %>
+  
+  <% if current_user.admin? %>
+  | 
+    <% unless user.admin? %>
+      <%= link_to "delete", user, :method => :delete, :confirm => "You sure?"%>
+    <% end %>
+  <% end %>
+</li>

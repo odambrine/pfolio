@@ -1,0 +1,15 @@
+<h2>Portfolio: <%= h @portfolio.name %></h2>
+<table class="front">
+	<tr>
+		<td class="main">
+			<h2 class="cashflow">Cashflows:</h2>
+			<%= render 'portfolios/cashflow_form' %>
+			<%= render 'portfolios/cashflows' %>
+		</td>
+		<td class="sidebar round">
+			<%= render 'pages/user_info' %>
+			
+		</td>
+	</tr>
+  	
+  </table>

@@ -1,0 +1,22 @@
+<% form_for @portfolio do |f| %>
+  <%= f.error_messages %>
+ 
+	  <div class="field">
+	  	<%= f.label :name %><br />
+	    <%= f.text_field :name %>
+	  </div>
+	
+   	  <div class="field">
+	  	<%= f.label :admin %><br />
+	    <%= f.check_box :admin %>
+	  </div>
+	
+	  <div class="field">
+	  	<%= f.label :show_in_graph %><br />
+	    <%= f.check_box :show_in_graph %>
+	  </div>
+
+  <div class="actions">
+  	<%= f.submit "Submit" %>
+  </div>
+<% end %>

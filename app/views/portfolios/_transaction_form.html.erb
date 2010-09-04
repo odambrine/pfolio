@@ -1,0 +1,41 @@
+<% form_for @transaction do |f| %>
+  <%= f.error_messages %>
+ 
+	  <div class="field">
+	  	<%= f.label :date %><br />
+	    <%= f.date_select :date %>
+	  </div>
+	
+	
+	  <p>
+	    <%= f.label :security %><br />
+	    <%= text_field_with_auto_complete :security, :description %>	
+	  </p>
+	
+	  <div class="field">
+	  	<%= f.label :operation %><br />
+	    <%= f.select :operation, Transaction::OPERATION_TYPES, :prompt => "Buy/sell/Dividend" %>
+		
+	  </div>
+	
+	  <div class="field">
+	  	<%= f.label :quantity %><br />
+	    <%= f.text_field :quantity %>
+	  </div>
+	
+	  <div class="field">
+	  	<%= f.label :price %><br />
+	    <%= f.text_field :price %>
+	  </div>
+	
+	  <div class="field">
+	  	<%= f.label :cost %><br />
+	    <%= f.text_field :cost %>
+	  </div>
+	
+	  <%= hidden_field_tag :portfolio_id, @transaction.portfolio_id %>
+
+  <div class="actions">
+  	<%= f.submit "Submit" %>
+  </div>
+<% end %>
